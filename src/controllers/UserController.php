@@ -49,14 +49,15 @@
 
                 $user = $this->requete->findByEmail($email);
 
-                if (!$user || password_verify( $password, $user['password']))  {
+                if (!$user || !password_verify( $password, $user['password']))  {
                     $_SESSION['erroLogin'] = "mail ou mot de passe incorect";
                     header("Location: /connexion" );
                     exit;
-                    return;
                 } 
 
-                $_SESSION['user'] = $user;
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['login'] = true;
+                
                 header("Location: /accueil" );
                 exit;
 

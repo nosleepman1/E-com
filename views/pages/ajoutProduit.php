@@ -33,12 +33,13 @@
         <div class="mb-3">
             <select name="select" class="form-select">
                 <?php foreach($categories as $categorie) : ?>
-                <option value="<?= $categorie['id'] ?> >  <?php echo $categorie['libelle'] ?> </option>
-               <?php endforeach ?>
+                <option value="<?= $categorie['id'] ?>"> <?=  $categorie['libelle'] ?> </option>
+                <?php endforeach ?>
             </select>
         </div>
 
-        <button type=" submit" class="btn btn-primary">Submit</button>
+        <button type=" submit" name="btn" class="btn btn-primary">Submit</button>
+
 
     </form>
 </div>

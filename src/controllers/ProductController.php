@@ -24,7 +24,7 @@
                 $description = $_POST['description'];
                 $prix = $_POST['prix'];
                 $quantite = $_POST['quantite'];
-                $userId = $_SESSION['user']['id'];
+                $userId = $_SESSION['user_id'];
                 $categorieId = $_POST['select'];
 
                 $produit = new Product($libelle, $description, $prix, $quantite);
@@ -36,7 +36,7 @@
 
             } else {
                
-                if($_SESSION['user'] || $_SESSION['admin']) {
+                if($_SESSION['login']) {
                     $categories = $this->categorie->All();
                     require_once __DIR__  . '/../../views/pages/ajoutProduit.php';
                
