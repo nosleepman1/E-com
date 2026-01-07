@@ -19,6 +19,7 @@
 
         public function create(){
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                
                 $libelle = $_POST['libelle'];
                 $description = $_POST['description'];
                 $prix = $_POST['prix'];

@@ -1,0 +1,17 @@
+{
+    "name": "abash/ecom",
+    "autoload": {
+        "psr-4": {
+            "Abash\\Ecom\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nosleepman1",
+            "email": "abdallahdiouf.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
