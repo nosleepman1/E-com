@@ -14,7 +14,7 @@
         }
 
         public function create(Product $product, $idUser, $idCategorie){  
-            $stmt = $this->db->prepare("INSERT INTO Produits(libelle, description, prix, quantite,id_user, id_categorie) VALUES(?, ?, ?, ?, ?, ?)");
+            $stmt = $this->db->prepare("INSERT INTO products(libelle, description, prix, quantite,id_user, id_categorie) VALUES(?, ?, ?, ?, ?, ?)");
             $stmt->execute([
                 $product->getLibelle(),
                 $product->getDescription(),

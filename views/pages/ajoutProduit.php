@@ -1,6 +1,6 @@
 <?php 
     ob_start();
-    $urlComplet = "/phpproject_iage/index.php/";
+    
 
     
 
@@ -8,7 +8,7 @@
 <div class="container p-5">
     <h1>AJOUTER PRODUIT</h1>
 
-    <form method="post" action="<?= $urlComplet ?>ajouter ">
+    <form method="post" action="/ajouter ">
 
         <div class="mb-3">
             <label for="name" class="form-label">Libelle</label>

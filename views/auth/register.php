@@ -1,10 +1,9 @@
 <?php 
     ob_start();
-    $urlComplet = "/phpproject_iage/index.php/";
 
 ?>
 <div class="container p-5">
-    <form method="post" action="<?= $urlComplet ?>inscription ">
+    <form method="post" action="/inscription ">
 
         <div class="mb-3">
             <label for="name" class="form-label">Full name</label>

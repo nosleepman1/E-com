@@ -12,7 +12,7 @@
             if (!self::$pdo) {
 
                 $host = "localhost";
-                $db   ="phpproject_iage";
+                $db   ="ecom";
                 $user = "root";
                 $pass = "";
 

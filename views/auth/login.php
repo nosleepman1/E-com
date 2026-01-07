@@ -1,6 +1,6 @@
 <?php 
     ob_start();
-    $urlComplet = "/phpproject_iage/index.php/";
+
 
 
 ?>
@@ -8,7 +8,11 @@
 
 
 <div class="container p-5">
-    <form method="post" action="<?= $urlComplet ?>connexion">
+    <h1>CONNEXION</h1>
+
+    <p class="my-4"><?php echo $_SESSION['erroLogin'] ?? ''; unset($_SESSION['erroLogin']);?></p>
+
+    <form method="post" action="/connexion">
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>

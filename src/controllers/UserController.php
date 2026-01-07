@@ -19,7 +19,7 @@
              
                 $name = $_POST['name'];
                 $email = $_POST['email'];
-                $password = $_POST['password'];
+                $password =password_hash( $_POST['password'], PASSWORD_DEFAULT);
 
                 $user = new User($name, $email, $password);
 
@@ -27,7 +27,7 @@
                 $this->requete->create($user);
                
                 $urlComplet = "/phpproject_iage/index.php/";
-                header("Location: " . $urlComplet . "connexion" );
+                header("Location: /connexion" );
 
 
             } else {
@@ -46,17 +46,18 @@
                 $email = $_POST['email'];
                 $password = $_POST['password'];
 
+
                 $user = $this->requete->findByEmail($email);
 
-                if (!$user || $user['password'] != $password)  {
+                if (!$user || password_verify( $password, $user['password']))  {
                     $_SESSION['erroLogin'] = "mail ou mot de passe incorect";
-                    header("Location: " . $urlComplet . "connexion" );
+                    header("Location: /connexion" );
                     exit;
                     return;
                 } 
 
                 $_SESSION['user'] = $user;
-                header("Location: " . $urlComplet . "accueil" );
+                header("Location: /accueil" );
                 exit;
 
             } else {

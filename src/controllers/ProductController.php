@@ -31,19 +31,17 @@
 
                 $this->requete->create($produit, $userId, $categorieId);
 
-                $urlComplet = "/phpproject_iage/index.php/";
-                header("Location: " . $urlComplet . "accueil" );
+               
+                header("Location: /accueil");
 
             } else {
                
                 if($_SESSION['user'] || $_SESSION['admin']) {
                     $categories = $this->categorie->All();
-                    $urlComplet = "/phpproject_iage/index.php/";
                     require_once __DIR__  . '/../../views/pages/ajoutProduit.php';
                
                 } else {
-                    $urlComplet = "/phpproject_iage/index.php/";
-                    header("Location: " . $urlComplet . "connexion" );
+                    header("Location: /connexion" );
                     exit;
                 }
             }

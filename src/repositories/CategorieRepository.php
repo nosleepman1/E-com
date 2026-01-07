@@ -12,7 +12,7 @@
         }
 
         public function All(){
-            $stmt = $this->db->prepare("SELECT * FROM categorie");
+            $stmt = $this->db->prepare("SELECT * FROM categories");
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }

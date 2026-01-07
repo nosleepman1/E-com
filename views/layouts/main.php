@@ -1,6 +1,6 @@
 <?php  
 
-    $urlComplet = "/phpproject_iage/index.php/";
+
    // $class = $_SESSION['admin'] == true ? 'admin' : ''
 
 ?>
@@ -35,18 +35,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" a href="  <?= $urlComplet?>accueil">Accueil</a>
+                            <a class="nav-link active" a href="/accueil">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= $urlComplet?>connexion">Connexion</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?= $urlComplet?>inscription">Inscription</a>
+                            <a class="nav-link" href="/connexion">Connexion</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= $urlComplet?>ajouter">AjouterProduit</a>
+                            <a class="nav-link" href="/inscription">Inscription</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ajouter">AjouterProduit</a>
                         </li>
 
                         <!-- <li class="nav-item  ">

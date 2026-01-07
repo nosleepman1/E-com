@@ -13,7 +13,7 @@
         }
 
         public function create(User $user){
-            $stmt = $this->db->prepare("INSERT INTO Utilisateurs(name, email, password) VALUES(?, ?, ?)");
+            $stmt = $this->db->prepare("INSERT INTO users(name, email, password) VALUES(?, ?, ?)");
             $stmt->execute([
                 $user->getName(),
                 $user->getEmail(),
@@ -22,7 +22,7 @@
         }
 
         public function findByEmail(string $email){
-            $stmt = $this->db->prepare("SELECT * FROM Utilisateurs WHERE email = ?");
+            $stmt = $this->db->prepare("SELECT * FROM users WHERE email = ?");
             $stmt->execute([$email]);
             return $stmt->fetch(PDO::FETCH_ASSOC);
         }
